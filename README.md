@@ -71,7 +71,22 @@ apache-cassandra-3.11.1
 
 
 
+# Update Cassandra Cluster Name :
+修改集群名称步骤
 
+更新集群名称字段
+
+cqlsh> UPDATE system.local SET cluster_name = '新集群名称' where key='local';
+1
+修改Cassandra.yaml中的cluster_name为新集群名称
+
+将memtable刷为commitlog
+
+shell> nodetool flush system
+1
+验证集群名称
+
+cqlsh> select cluster_name from system.local;
 
 
 
