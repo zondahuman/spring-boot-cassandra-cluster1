@@ -91,6 +91,8 @@ cqlsh> select cluster_name from system.local;
 
 
 
+# Cassandra Cql3
+INSERT INTO library (id,createtime,question,updatetime) VALUES (uuid(), dateof(now()),'PgXOp', dateof(now()));
 
 
 
